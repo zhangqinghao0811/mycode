@@ -11,7 +11,7 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 import mnist_inference
 
-BATCH_SIZE = 2
+BATCH_SIZE = 2 #convenient for check outputs
 LEARNING_RATE_BASE = 0.001#0.01
 LEARNING_RATE_DECAY = 0.99
 REGULARAZTION_RATE = 1e-4
