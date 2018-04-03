@@ -57,11 +57,13 @@ def train(mnist):
                 data_dict = {x: reshaped_xs, y_: ys}
                 w_store = sess.run(fc2_weights)
                 print('y :',sess.run(y , feed_dict=data_dict))
-                print('y :',sess.run(y , feed_dict=data_dict))#Why are the results different?
+                print('y :',sess.run(y , feed_dict=data_dict))  
+                #-----------Why are the results different?-----------
                 print('y_max :', sess.run(y_max, feed_dict=data_dict))
                 print('y_max :', sess.run(y_max, feed_dict=data_dict))
                 w_store2 = sess.run(fc2_weights)
-                print('w is same:', np.array(w_store==w_store2).all())#parameters doesn't change
+                print('w is same:', np.array(w_store==w_store2).all())
+                #--------------parameters doesn't change--------------
                 correct_prediction = tf.equal(y_max, ys_max)
                 print("After %d training step(s), loss on training batch is %f." % (i, loss_value))
                 print('CP:',sess.run(correct_prediction,feed_dict=data_dict))
