@@ -70,7 +70,7 @@ def train(mnist):
                 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
                 train_accuracy = sess.run(accuracy,feed_dict=data_dict)
                 print("step %d, training accuracy %g"%(i, train_accuracy))
-                break
+                break #For test, I only need run this code once.
         saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
 
 
